@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">   
+    
+    <title>loggin</title>
+     <style>
+    .logo {
+     grid-area:logo;                
+     justify-self: center;          
+     text-align: center;
+     font-family: "Great Vibes", cursive;
+     font-size: clamp(28px, 4vw, 44px);
+     margin:0;
+    }               
+    .login-container {
+      max-width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+    }
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #332020;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffa0a0;
+    }
+  </style>
+</head>
+ <body>
+ 
+  <div class="login-container">
+    <div class="logo">Arezoo Shahgaldi</div>
+    <h2>Logga in</h2>
+    <p>Ange din e-postadress:</p>
+   <input type="email" placeholder="E-post">
+   <button>Fortsätt</button>
+ </div>
+ <script src="./script1.js" defer></script>
+ </body>
+</html>
+

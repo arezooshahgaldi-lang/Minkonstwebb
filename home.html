@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="konst1.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="header">
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="logo">Arezoo Shahgaldi</div>
+        <div class="cart">
+             <a id="cart-link" class="cart-btn" href="shopping.html" aria-label="Kundvagn">
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+              <path fill="currentColor" d="M6.505 2h11a1 1 0 0 1 .8.4l2.7 3.6v15a1 1 0 0 1-1 1h-16a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4Zm12.5 6h-14v12h14V8Zm-.5-2l-1.5-2h-10l-1.5 2h13Zm-9.5 4v2a3 3 0 1 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2Z"/>
+              </svg>
+              <span id="cart-count"></span>
+             </a>
+             <a id="open-login" href="#" aria-label="Logga in">
+               <svg aria-hidden="true" fill="none" focusable="false" width="24" viewBox="0 0 24 24" stroke-width="var(--icon-stroke-width)" stroke="currentColor" class="icon icon-account">
+               <path d="M16.1255 7.75C15.9415 10.228 14.0625 12.25 12.0005 12.25C9.93847 12.25 8.05647 10.229 7.87547 7.75C7.68847 5.172 9.51547 3.25 12.0005 3.25C14.4845 3.25 16.3135 5.219 16.1255 7.75Z" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M3.0166 21.747C3.7826 17.5 7.9216 15.25 11.9996 15.25C16.0776 15.25 20.2166 17.5 20.9836 21.747" stroke-miterlimit="10"></path>
+               </svg>
+             </a>
+        
+          <div id="mini-cart" aria-live="polite" aria-atomic="true">
+            <div class="mini-cart-row">
+               <img id="mini-cart-thumb" src="" alt="" />
+              <div class="mini-cart-text">
+                <strong id="mini-cart-title"></strong>
+                <small id="mini-cart-price"></small>
+             </div>
+           </div>
+           <div class="mini-cart-actions">
+             <a href="./shopping.html"></a>
+           </div>
+          </div>
+        </div>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="./about me.html" target="_blank">Om Mig</a></li>
+                <li><a href="gallery.html" target="_blank">Galleri</a></li>
+                <li><a href="contact.html" target="_blank">Kontakt</a></li>
+            </ul>
+        </nav>
+        <style>
+            .image-slider {
+             overflow: hidden;
+             max-width: auto;
+             margin: 2rem auto;
+             height: 400px;
+             border-radius: 8px;
+             position: relative;
+             margin-left: 0;
+            margin-right: 0;
+             }
+
+          .image-slider-track {
+            display: flex;
+           animation: scroll-horizontal 20s linear infinite;
+            }
+
+         .image-slider-track img {
+           width: auto;
+           max-width: 100%;
+           height: 400px;
+           object-fit: contain;
+           }
+
+        @media (min-width: 768px) {
+          .image-slider {
+           height: 1000px;
+          }
+          .image-slider-track {
+           flex-direction: row;
+           animation: scroll-horizontal  20s linear infinite;
+          }
+         @keyframes scroll-horizontal {
+          0% { transform: translateX(0); }
+         100% { transform: translateX(-100%); }
+          }
+        }
+         
+           @media (max-width: 768px) {
+           .image-slider {
+             height:auto;
+             }
+         .image-slider-track {
+           flex-direction: column;
+           animation: scroll-vertical 40s linear infinite;
+           }
+          .image-slider-track img {
+           width: 100%;
+           height: auto;
+           margin: 10px 0;
+          }
+
+         @keyframes scroll-vertical {
+           0% { transform: translateY(0); }
+          100% { transform: translateY(-100%); }
+         }
+         }
+          .main-content {
+            text-align: center;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+          }
+          .main-content p { 
+            flex:1;
+             line-height:1.6;
+             font-size:16px;
+             text-align:center;
+            }
+          main{position: relative;}
+          #btn-back-home {
+             position: fixed; 
+             bottom:30px;
+             padding: 12px 18px; 
+             background-color: #332020; 
+             color: white; 
+             border: none;
+             border-radius: 8px;
+             font-size: 16px; 
+             cursor: pointer; 
+            transition: background-color 0.3s;
+             transform: none !important; 
+             z-index: 10;
+             top: auto !important;
+             left: 16px; 
+          }
+         #btn-back-home:hover {
+           background-color: #a04557;
+          }
+       </style>
+
+    </header>
+
+   <main>
+    <div class="main-content">
+      <h1>Välkommen till min konstverk</h1><br></br>
+       <p>Jag heter Arezoo Shahgaldi och det här är min värld av målningar och inspiration.</p>
+       <p>Scrolla ner för att upptäcka mina senaste verk eller besök <a href="gallery.html">galleriet</a>.</p><br></br>
+    </div>
+
+       <div class="image-slider">
+         <div class="image-slider-track">
+            <img src="./målningar/målning1.jpeg" alt="Bild 1">
+            <img src="./målningar/målning2.jpeg" alt="Bild 2">
+            <img src="./målningar/målning3.jpeg" alt="Bild 3">
+            <img src="./målningar/målning4.jpeg" alt="Bild 4">
+            <img src="./målningar/målning5.jpeg" alt="Bild 5">
+            <img src="./målningar/målning6.jpeg" alt="Bild 6">
+            <img src="./målningar/målning7.jpeg" alt="Bild 7">
+            
+         </div>
+        
+       </div>
+       <button id="btn-back-home" type="button">Gå på start sidan</button>
+   </main>
+   
+     <script src="./script1.js" defer></script>
+</body>
+</html>

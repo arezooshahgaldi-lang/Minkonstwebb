@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Konstverk</title>
+    <link rel="stylesheet" href="konst1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="header">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Öppna meny" aria-expanded="false" aria-controls="nav-panel">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <div class="logo">Arezoo Shahgaldi</div>
+        <div class="cart">
+             <a id="cart-link" class="cart-btn" href="shopping.html" aria-label="Kundvagn">
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+              <path fill="currentColor" d="M6.505 2h11a1 1 0 0 1 .8.4l2.7 3.6v15a1 1 0 0 1-1 1h-16a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4Zm12.5 6h-14v12h14V8Zm-.5-2l-1.5-2h-10l-1.5 2h13Zm-9.5 4v2a3 3 0 1 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2Z"/>
+              </svg>
+              <span id="cart-count"></span>
+             </a>
+             <a id="open-login" href="#" aria-label="Logga in">
+               <svg aria-hidden="true" fill="white" focusable="false" width="24" viewBox="0 0 24 24" stroke-width="var(--icon-stroke-width)" stroke="currentColor" class="icon icon-account">
+               <path d="M16.1255 7.75C15.9415 10.228 14.0625 12.25 12.0005 12.25C9.93847 12.25 8.05647 10.229 7.87547 7.75C7.68847 5.172 9.51547 3.25 12.0005 3.25C14.4845 3.25 16.3135 5.219 16.1255 7.75Z" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M3.0166 21.747C3.7826 17.5 7.9216 15.25 11.9996 15.25C16.0776 15.25 20.2166 17.5 20.9836 21.747" stroke-miterlimit="10"></path>
+               </svg>
+             </a>
+        
+          <div id="mini-cart" aria-live="polite" aria-atomic="true">
+            <div class="mini-cart-row">
+               <img id="mini-cart-thumb" src="" alt="" />
+               <div class="mini-cart-text">
+                <strong id="mini-cart-title"></strong>
+                <small id="mini-cart-price"></small>
+             </div>
+           </div>
+           <div class="mini-cart-actions">
+             <a href="./shopping.html">Visa kundvagn</a>
+           </div>
+          </div>
+        </div>
+        <nav class="nav" id="nav">
+              <ul>
+                <li><a href="./home.html" target="_blank">Home</a></li>
+                <li><a href="./about me.html" target="_blank">Om Mig</a></li>
+                <li><a href="./gallery.html" target="_blank">Galleri</a></li>
+                <li><a href="./contact.html" target="_blank">Kontakt</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-hero">
+         <div class="art-item large">
+          <figure class="media">
+            <img src="./målningar/målning1.jpeg" alt="Art 1">
+          </figure>
+              <div class="produkt-info">
+                 <h3>Vinterlandskap</h3>
+                 <p>Oljemålning på canvas 70*100</p>
+                 <p>Pris:20000 SEK</p>
+                <button class="add-to-cart"
+                   data-id="vinterlandskap"
+                   data-title="Vinterlandskap"
+                   data-price="20000"
+                   data-image="./målningar/målning1.jpeg">
+                    Lägg till i kundvagn
+                </button>
+              </div>
+          </div>
+        </section>
+         
+        <div class="section-title">
+          <h1>Välkommen till min konstverk</h1>
+        </div>
+
+        <article class="about-me-section">
+           <div class="about-image">
+             <img src="./målningar/bild.jpeg" alt="About me" />
+           </div>
+          <div class="about-text">
+            <h2>Om Mig</h2>
+           <p>Jag lever min dröm genom att arbeta på fritids som konstnär och älskar att fånga världens skönhet i en realistisk stil. 
+            Drivkraften kommer från ett brinnande intresse och en stark passion, jag har på egen hand tillägnat mig de flesta kunskaper inom måleriets konst.<br></br>
+            Min inspiration hämtar jag från naturen och de miljöer som omger mig.
+            Jag föredrar att arbeta i större format för att betraktaren helt ska kunna dras in i kompositionen. De små, intrikata detaljerna skapar liv i målningen, och jag strävar alltid efter en hög nivå av realism.
+            Penseldrag, färgnyanser och texturer förfinas omsorgsfullt för att skapa en upplevelse som är både raffinerad och visuellt fängslande.</p>
+          </div>
+        </article>
+
+        <div class="artworks-section">
+          <div class="art-item small">
+           <figure class="media"> 
+              <img src="./målningar/målning2.jpeg" alt="Ett Minne">
+           </figure> 
+              <div class="produkt-info">
+                <h3>Ett Minne</h3>
+                <p>Oljemålning på canvas 70*100</p>
+                <p>Pris: 15000 SEK</p>
+               <button class="add-to-cart"
+                data-id="ett-minne"
+                data-title="Ett Minne"
+                data-price="15000"
+                data-image="./målningar/målning2.jpeg">
+                   Lägg till i kundvagn
+               </button>
+             </div>
+           </div>
+          <div class="art-item small">
+            <figure class="media">
+              <img src="./målningar/målning3.jpeg" alt="Art 3">
+            </figure>
+              <div class="produkt-info">
+                <h3>Grekiska havet</h3>
+                <p>Oljemålning på canvas 80*60</p>
+                <p>Pris:10000 SEK</p>
+               <button class="add-to-cart"
+                  data-id="Grekiska havet"
+                  data-title="Grekiska havet"
+                  data-price="10000"
+                  data-image="./målningar/målning3.jpeg">
+                      Lägg till i kundvagn
+               </button>
+             </div>
+          </div>
+           <div class="art-item small">
+             <figure class="media">
+              <img src="./målningar/målning4.jpeg" alt="Art 4">
+             </figure>
+              <div class="produkt-info">
+                <h3>Höstpromenad</h3>
+                <p>Oljemålning på canvas 50*70</p>
+                <p>Pris:10000 SEK</p>
+                <button class="add-to-cart"
+                  data-id="Hostpromenad"
+                  data-title="Höstpromenad"
+                  data-price="10000"
+                  data-image="./målningar/målning4.jpeg">
+                   Lägg till i kundvagn
+               </button>
+             </div>
+          </div>
+          <div class="art-item small">
+             <figure class="media">
+              <img src="./målningar/portrait1a.jpeg" alt="Art 5">
+            </figure>
+                <div class="produkt-info">
+                <h3>Redo för festen</h3>
+                <p>Oljemålning på canvas 50*70</p>
+                <p>Pris:10000 SEK</p>
+                <button class="add-to-cart"
+                   data-id="redo-for-festen"
+                   data-title="Redo för festen"
+                   data-price="10000"
+                   data-image="./målningar/portrait1a.jpeg">
+                   Lägg till i kundvagn
+               </button>
+              </div>
+          </div>
+         <div class="art-item small">
+           <figure class="media">
+             <img src="./målningar/målning6a.jpeg" alt="Art 6">
+           </figure>
+              <div class="produkt-info">
+                <h3>Granatäpple&druvrätt</h3>
+                <p>Oljemålning på canvas 50*70</p>
+                <p>Pris:10000 SEK</p>
+                <button class="add-to-cart"
+                  data-id="granatapple-druvratt"
+                  data-title="Granatäpple och druvrätt"
+                  data-price="10000"
+                  data-image="./målningar/målning6a.jpeg">
+                   Lägg till i kundvagn
+                </button>
+             </div>
+          </div>
+           <div class="art-item small">
+             <figure class="media">
+               <img src="./målningar/portrait2a.jpeg" alt="Art 8">
+             </figure>
+              <div class="produkt-info">
+                <h3>Studera med stearinljus</h3>
+                <p>Oljemålning på canvas 50*70</p>
+                <p>Pris:10000 SEK</p>
+                <button class="add-to-cart"
+                   data-id="Studera-med-stearinljus"
+                   data-title="Studera med stearinljus"
+                   data-price="10000"
+                   data-image="./målningar/portrait2a.jpeg">
+                   Lägg till i kundvagn
+                </button>
+             </div>
+          </div>
+           <div class="art-item small">
+             <figure class="media">
+               <img src="./målningar/målning7.jpeg" alt="Art 7">
+             </figure>
+              <div class="produkt-info">
+                <h3>Vinterbäck</h3>
+                <p>Oljemålning på canvas 50*70</p>
+                <p>Pris:15000 SEK</p>
+               <button class="add-to-cart"
+                 data-id="vinterback"
+                 data-title="Vinterbäck"
+                 data-price="15000"
+                 data-image="./målningar/målning7.jpeg">
+                 Lägg till i kundvagn
+              </button>
+             </div>
+           </div>
+      </div>
+    </main>
+   <footer class="contact">
+        <h2>Kontakt</h2>
+        <p>Om du är intresserad av att köpa konstverk eller samarbeta, kontakta mig via e-post eller Instagram.</p>
+        <p>Email: <a href="arezoo.shahgaldi@yahoo.com">arezoo.shahgaldi@yahoo.com</a></p>
+   </footer>
+
+    <script src="./cart.js" defer></script>
+    <script src="./script1.js" defer></script>
+
+  </body>
+</html>

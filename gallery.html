@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleri</title>
+  <link rel="stylesheet" href="konst1.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <header class="header">
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="logo">Arezoo Shahgaldi</div>
+    <div class="cart">
+              <a id="cart-link" class="cart-btn" href="shopping.html" aria-label="Kundvagn">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                <path fill="currentColor" d="M6.505 2h11a1 1 0 0 1 .8.4l2.7 3.6v15a1 1 0 0 1-1 1h-16a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4Zm12.5 6h-14v12h14V8Zm-.5-2l-1.5-2h-10l-1.5 2h13Zm-9.5 4v2a3 3 0 1 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2Z"/>
+                </svg>
+               <span id="cart-count"></span>
+              </a>
+             <a id="open-login" href="#" aria-label="Logga in">
+               <svg aria-hidden="true" fill="none" focusable="false" width="24" viewBox="0 0 24 24" stroke-width="var(--icon-stroke-width)" stroke="currentColor" class="icon icon-account">
+               <path d="M16.1255 7.75C15.9415 10.228 14.0625 12.25 12.0005 12.25C9.93847 12.25 8.05647 10.229 7.87547 7.75C7.68847 5.172 9.51547 3.25 12.0005 3.25C14.4845 3.25 16.3135 5.219 16.1255 7.75Z" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M3.0166 21.747C3.7826 17.5 7.9216 15.25 11.9996 15.25C16.0776 15.25 20.2166 17.5 20.9836 21.747" stroke-miterlimit="10"></path>
+               </svg>
+             </a>
+     </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="home.html" target="_blank">Home</a></li>
+        <li><a href="./about me.html" target="_blank">Om Mig</a></li>
+        <li><a href="gallery.html" target="_blank">Galleri</a></li>
+        <li><a href="contact.html" target="_blank">Kontakt</a></li>
+      </ul>
+    </nav>
+    
+
+  
+     <div id="mini-cart" aria-live="polite" aria-atomic="true">
+      <div class="mini-cart-row">
+        <img id="mini-cart-thumb" src="" alt="" />
+        <div class="mini-cart-text">
+         <strong id="mini-cart-title"></strong>
+         <small id="mini-cart-price"></small>
+       </div>
+      </div>
+      <div class="mini-cart-actions">
+        <a href="shopping.html">Visa kundvagn</a>
+      </div>
+     </div>
+   </div>
+
+  </header>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Galleri</h1>
+    </header>
+
+    <section class="gallery">
+      <!-- Kort 1 -->
+      <div class="card"id="vinterlandskap">
+         <a class="media-link" href="#vinterlandskap" aria-label="Se målningen Vinterlandskap">
+          <figure class="media" style="--fx:60%; --fy:35%;">
+           <img src="./målningar/målning1.jpeg" alt="Vinterlandskap – snöigt landskap">
+          </figure>
+         <figcaption class="meta">
+          <div class="title">Vinterlandskap</div>
+          <div class="price">20 000 SEK</div>
+        </figcaption>
+        </a>
+         <button class="add-to-cart" 
+           data-id="vinterlandskap" 
+           data-title="Vinterlandskap" 
+           data-price="20000" 
+           data-image="./målningar/målning1.jpeg">
+              Lägg till i kundvagn
+        </button>
+       </div>
+
+      <!-- Kort 2 -->
+       <div class="card" id="ett-minne">
+        <a class="card" href="#Ett Minne" aria-label="Se målningen En Minne">
+          <figure class="media" style="--fx:45%; --fy:45%;">
+            <img src="./målningar/målning2.jpeg" alt="Ett Minne">
+          </figure>
+          <figcaption class="meta">
+           <div class="title">Ett Minne</div>
+           <div class="price">15 000 SEK</div>
+          </figcaption>
+         </a>
+        <button class="add-to-cart"
+          data-id="en-minne"
+          data-title="En Minne"
+          data-price="15000"
+          data-image="./målningar/målning2.jpeg">
+          Lägg till i kundvagn
+        </button>
+      </div>
+      <!-- Kort 3 -->
+        <div class="card" id="grekiska-havet">
+         <a class="card" href="#Grekiska havet" aria-label="Se målningen Grekiska havet">
+          <figure class="media" style="--fx:50%; --fy:25%;">
+            <img src="./målningar/målning3.jpeg" alt="Grekiska havet">
+          </figure>
+          <figcaption class="meta">
+            <div class="title">Grekiska havet</div>
+            <div class="price">10 000 SEK</div>
+          </figcaption>
+         </a>
+        <button class="add-to-cart"
+          data-id="grekiska-havet"
+          data-title="Grekiska havet"
+          data-price="10000"
+          data-image="./målningar/målning3.jpeg">
+           Lägg till i kundvagn
+        </button>
+      </div>
+      <!-- Kort 4 -->
+      <div class="card" id="Hostpromenad">
+        <a class="card" href="#>Höstlöv" aria-label="Se målningen >Höstpromenad">
+         <figure class="media" style="--fx:58%; --fy:42%;">
+          <img src="./målningar/målning4.jpeg" alt=">Höstlöv">
+         </figure>
+         <figcaption class="meta">
+          <div class="title">Höstpromenad</div>
+          <div class="price">10 000 SEK</div>
+         </figcaption>
+        </a>
+       <button class="add-to-cart"
+         data-id="Hostpromenad"
+         data-title="Höstpromenad"
+          data-price="10000"
+          data-image="./målningar/målning4.jpeg">
+          Lägg till i kundvagn
+       </button>
+      </div>
+       <!-- Kort 5 (Porträtt) -->
+        <div class="card" id="redo-for-festen">
+          <a class="card" href="#Redo för festen" aria-label="Se målningen Redo för festen">
+          <figure class="media" style="--fx:58%; --fy:42%;">
+            <img src="./målningar/portrait1a.jpeg" alt="Redo för festen">
+          </figure>
+          <figcaption class="meta">
+           <div class="title">Redo för festen</div>
+           <div class="price">10 000 SEK</div>
+          </figcaption>
+       </a>
+        <button class="add-to-cart"
+          data-id="redo-for-festen"
+          data-title="Redo för festen"
+          data-price="10000"
+          data-image="./målningar/portrait1a.jpeg">
+          Lägg till i kundvagn
+        </button>
+       </div>
+        <!-- Kort 6 -->
+       <div class="card" id="granatapple-druvratt">
+         <a class="card" href="#Granatäpple&druvrätt" aria-label="Se målningen Granatäpple&druvrätt">
+          <figure class="media" style="--fx:58%; --fy:42%;">
+            <img src="./målningar/målning6a.jpeg" alt="Granatäpple&druvrätt">
+          </figure>
+          <figcaption class="meta">
+             <div class="title">Granatäpple&druvrätt</div>
+            <div class="price">10 000 SEK</div>
+          </figcaption>
+         </a>
+        <button class="add-to-cart"
+          data-id="granatapple-druvratt"
+          data-title="Granatäpple & druvrätt"
+          data-price="10000"
+          data-image="./målningar/målning6a.jpeg">
+           Lägg till i kundvagn
+        </button>
+       </div>
+        <!-- Kort 7 -->
+       <div class="card" id="vinterback">
+         <a class="card" href="#Vinterbäck" aria-label="Se målningen Vinterbäck">
+          <figure class="media" style="--fx:58%; --fy:42%;">
+           <img src="./målningar/målning7.jpeg" alt="Vinterbäck">
+          </figure>
+          <figcaption class="meta">
+            <div class="title">Vinterbäck</div>
+            <div class="price">15 000 SEK</div>
+          </figcaption>
+         </a>
+         <button class="add-to-cart"
+           data-id="vinterback"
+           data-title="Vinterbäck"
+           data-price="15000"
+           data-image="./målningar/målning7.jpeg">
+           Lägg till i kundvagn
+         </button>
+       </div>
+        <!-- Kort 8 (Porträtt) -->
+       <div class="card" id="studera-med-stearinljus">
+        <a class="card" href="#Studera med stearinljus" aria-label="Se målningen Studera med stearinljus">
+         <figure class="media" style="--fx:58%; --fy:42%;">
+          <img src="./målningar/portrait2a.jpeg" alt="Studera med stearinljus">
+         </figure>
+         <figcaption class="meta">
+          <div class="title">Studera med stearinljus</div>
+          <div class="price">10 000 SEK</div>
+         </figcaption>
+       </a>
+        <button class="add-to-cart"
+          data-id="studera-med-stearinljus"
+          data-title="Studera med stearinljus"
+          data-price="10000"
+          data-image="./målningar/portrait2a.jpeg">
+          Lägg till i kundvagn
+        </button>
+       </div>
+    </section>
+  </main>
+
+  <button id="btn-back-home" type="button">Gå på start sidan</button>
+  <footer class="contact">
+        <h2>Kontakt</h2>
+        <p>Om du är intresserad av att köpa konstverk eller samarbeta, kontakta mig via e-post eller Instagram.</p>
+        <p>Email: <a href="arezoo.shahgaldi@yahoo.com">arezoo.shahgaldi@yahoo.com</a></p>
+  </footer>
+ 
+  <script src="./cart.js" defer></script>
+  <script src="./script1.js" defer></script>
+</body>
+</html>

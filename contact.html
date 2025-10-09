@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt</title>
+<link rel="stylesheet" href="konst1.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="header">
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="logo">Arezoo Shahgaldi</div>
+        <div class="cart">
+             <a id="cart-link" class="cart-btn" href="shopping.html" aria-label="Kundvagn">
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+              <path fill="currentColor" d="M6.505 2h11a1 1 0 0 1 .8.4l2.7 3.6v15a1 1 0 0 1-1 1h-16a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4Zm12.5 6h-14v12h14V8Zm-.5-2l-1.5-2h-10l-1.5 2h13Zm-9.5 4v2a3 3 0 1 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2Z"/>
+              </svg>
+              <span id="cart-count"></span>
+             </a>
+             <a id="open-login" href="#" aria-label="Logga in">
+               <svg aria-hidden="true" fill="none" focusable="false" width="24" viewBox="0 0 24 24" stroke-width="var(--icon-stroke-width)" stroke="currentColor" class="icon icon-account">
+               <path d="M16.1255 7.75C15.9415 10.228 14.0625 12.25 12.0005 12.25C9.93847 12.25 8.05647 10.229 7.87547 7.75C7.68847 5.172 9.51547 3.25 12.0005 3.25C14.4845 3.25 16.3135 5.219 16.1255 7.75Z" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M3.0166 21.747C3.7826 17.5 7.9216 15.25 11.9996 15.25C16.0776 15.25 20.2166 17.5 20.9836 21.747" stroke-miterlimit="10"></path>
+               </svg>
+             </a>
+        
+          <div id="mini-cart" aria-live="polite" aria-atomic="true">
+            <div class="mini-cart-row">
+               <img id="mini-cart-thumb" src="" alt="" />
+              <div class="mini-cart-text">
+                <strong id="mini-cart-title"></strong>
+                <small id="mini-cart-price"></small>
+             </div>
+           </div>
+           <div class="mini-cart-actions">
+             <a href="./shopping.html"></a>
+           </div>
+          </div>
+        </div>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="home.html" target="_blank">Home</a></li>
+                <li><a href="./about me.html" target="_blank">Om Mig</a></li>
+                <li><a href="gallery.html" target="_blank">Galleri</a></li>
+                <li><a href="contact.html" target="_blank">Kontakt</a></li>
+            </ul>
+        </nav>
+        <style>
+        .kontakt-me-section {
+         display:flex;
+         gap:60px; 
+         align-items:center;
+         justify-content: center;
+         max-width:1100px;        
+         margin:40px auto;        
+         padding:0 ;
+         }
+
+        .about-image { 
+           flex:0 1 auto; 
+           width: 50%;    
+          justify-self: flex-start;
+  
+         }
+        .about-image img {
+         width:100%;
+         height:auto; 
+         border-radius:8px;
+   
+        }
+        .about-text { 
+         flex:1;
+         line-height:1.6;
+         font-size:16px;
+          text-align:justify;
+       }
+       .about-text h1 {
+        font-size:32px; 
+        margin-bottom:24px;
+        text-align:center;
+      }
+       #btn-back-home {
+        position: absolute; 
+        bottom: 10px;
+        padding: 12px 18px; 
+        background-color: #332020; 
+        color: white; 
+        border: none;
+        border-radius: 8px;
+        font-size: 16px; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+          }
+  
+         #btn-back-home:hover {
+           background-color: #a04557;
+         }
+        @media (max-width: 768px) {
+         .kontakt-me-section {
+          flex-direction:column;
+          max-width: 100%; 
+          gap:20px; 
+          padding:0 10px;
+        }
+        #btn-back-home {
+          bottom:40px;
+        }
+         }
+     </style>
+     </header>
+
+    <main>
+       <section class="kontakt-me-section">
+           <div class="about-image">
+             <img src="./målningar/kontaktBild.jpeg" alt="Kontakt me" />
+           </div>
+          <div class="about-text">
+          <h1>Kontakta mig</h1>
+          <p>Är du osäker på vilka motiv, mått eller färger som skulle passa bäst hemma hos dig? Jag hjälper dig gärna!
+
+           Jag får ofta frågan om jag målar på beställning och det gör jag vid tillfälle. Önskar du beställa en målning av mig, hör av dig via mail eller telefon så hittar vi den perfekta lösningen tillsammans!</p>
+           <p>Email: arezoo.shahgaldi@yahoo.com</p>
+           <p>Telefon: 0728718793</p>
+           <p>Följ mig på Instagram: <a href="https://www.instagram.com/arezooshahgaldi" target="_blank">Mitt Instagram</a></p>
+        </section>
+    </main>
+    <button id="btn-back-home" type="button">Gå på start sidan</button>
+    <script src="./script1.js" defer></script>
+</body>
+</html>
