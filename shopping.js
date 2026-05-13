@@ -1,4 +1,4 @@
-// shopping.js — فقط مخصوص صفحه سبد
+// shopping.js 
 document.addEventListener('DOMContentLoaded', ()=>{
   const list = document.getElementById('cart-list');
   const totalEl = document.getElementById('cart-total');
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
     let total = 0;
     list.innerHTML = cart.map((it, idx)=>{
-      const line = (it.price||0)*(it.qty||1); //Det "it.price || 0 " betyder det att om priset inte finns eller är undefined,så använder  0 som standardvärde.
-       // Och samma sak med "it.qty || 1", om inget antal är satt, så antar vi att det är 1.
+      const line = (it.price||0)*(it.qty||1); 
+       
       total += line;
       return `
         <div class="cart-row" style="display:flex;align-items:center;gap:12px;margin:10px 0;">
