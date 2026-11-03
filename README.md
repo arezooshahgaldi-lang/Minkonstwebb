@@ -1,41 +1,93 @@
-# >Min Konstverk
- Jag byggde den här webbplatsen  för att visa och sälja mina tavlor.
-På startsidan finns mina tavlor med information om varje motiv samt lite information om mig själv, som också finns under länken About Me.
+# Min Konstwebb – Art Gallery & Webshop
 
- Det finns möjlighet att köpa motiv direkt från huvudsidan, alltså under länken Galleri.
-I navigeringen har jag gjort en enkel meny som jag planerar att förbättra i framtiden.
-Jag har även skapat en miniräknare (mini counter) som visar antalet tavlor som användaren har lagt i varukorgen.
+A responsive website where I show and sell my own paintings. Visitors can browse the gallery, read about each painting and about me, add paintings to a shopping cart and go to checkout.
 
- I headern finns en inloggningsikon där användaren kan skriva in sin e-postadress.
-På navigationssidorna finns dessutom en knapp för att gå tillbaka till startsidan.
+Built with **HTML, CSS and vanilla JavaScript (ES6)** – no frameworks.
 
-## Tekniker som används
-- **HTML**: Jag har använt semantiska taggar som`<header>, <nav>, <main>, <section>, <article>, <footer>` för att skapa en tydlig struktur.
-- **CSS**: Layouten är byggd med Flexbox och Grid för att göra sidan responsiv och anpassad till olika skärmar.
-- **JavaScript**: Jag har skrivit funktioner för att hantera kundvagn, hamburger-menyn, och popup-fönstret för inloggning med JavaScript.
-Jag har också lagt till en knapp ”Gå till startsidan” för att skapa mer interaktivitet mellan sidorna.
+## Features
 
-- **ES6**: Jag har använt moderna ES6-funktioner som arrow functions och const/let.
+- **Gallery** with paintings, descriptions and prices
+- **Shopping cart** that is saved in `localStorage`, so it is kept when you move between pages or reload
+- **Mini cart popup** and a **cart counter** in the header that update when you add a painting
+- **Cart page** where you can remove items, empty the cart and see the total price
+- **Checkout page** with a form and an order summary (number of items and total)
+- **Responsive hamburger menu** for mobile, with `aria-expanded` for accessibility
+- **Login popup** opened in a centered window
+- **About me** and **Contact** pages, and an image slider on the home page
 
-Jag har skapat två separata JavaScript-filer för att hantera kundvagnen:
-`cart.js`, som används för att hantera minikorgen eller kundvagne. Den sköter all funktionalitet för att lägga till och ta bort varor och den använder localStorage för att spara innehållet i kundvagnen.Eftersom localStorage inte kan spara objekt direkt använder jag JSON.stringify() för att omvandla objekt till text, och JSON.parse() för att göra om texten tillbaka till objekt.
-I `cart.js`används en beräkningsfunktion för att visa antalet tavlor i headern, och en `HOF` '`reduce`' används för att räkna ut total mängd (quantity)."
+## Tech stack
 
- `shopping.js`Denna fil hanterar hur kundvagnen visas och uppdateras. I`shopping.js`har jag en `render funktion` som kontrolera kundvagnen med en if-satse även visar det när kundvagnen är tomt .Render gör alltså så att innehållet i kundvagnen alltid är korrekt och uppdaterat för användaren.I den`shopping.js` skapar jag HTML-koden och stilen för varje produkt *dynamiskt*.med hjälp av template literals (t.ex. ${it.image}) för att visa bilder och information direkt från produkten.
- Med samma teknik visar jag antal (${it.qty||1}) och pris per styck (${CART.formatSEK(it.price||0)}).
- På så sätt hämtas och visas produktinformationen automatiskt.
+| Area | Technology |
+|---|---|
+| Structure | HTML5 with semantic tags (`header`, `nav`, `main`, `section`, `article`, `footer`) |
+| Styling | CSS with Flexbox, Grid and media queries |
+| Logic | JavaScript (ES6): arrow functions, `const`/`let`, template literals, array methods |
+| Storage | `localStorage` with `JSON.stringify()` / `JSON.parse()` |
 
+## How it works
 
- `script1.js` Denna fil används för startsidan och innehåller funktioner för navigering, meny (menu-toggle) och inloggning.
- Jag skapade en MediaQuery som är sant när fönstret är minst 769px brett (”desktopläge”)En hjälpfunktion stänger den mobila menyn i desktop-läge och uppdaterar aria-expanded till true eller false beroende på om menyn är öppen eller stängd.
+### `cart.js` – cart logic
+- Reads and saves the cart in `localStorage`.
+- Adds paintings to the cart. If the painting is already there, the quantity increases.
+- Uses `reduce()` to count the total number of items for the counter in the header.
+- Formats prices in Swedish kronor with `Intl.NumberFormat('sv-SE')`.
 
- Koden document.querySelectorAll('a[href^="#"]').forEach(...) hittar alla länkar där href börjar med # (ankarlänkar inom samma sida) och stoppar standardbeteendet (att sidan hoppar eller scrollar).
+### `shopping.js` – cart page
+- A `render()` function builds the cart dynamically with template literals.
+- Shows a message when the cart is empty.
+- Calculates line totals and the total price, and lets the user remove items or empty the cart.
 
-Till sist skapade jag en back-knapp som gör att användaren kan gå tillbaka till startsidan.
-Jag skapade även en open-login-funktion som öppnar popup-fönstret när användaren klickar på inloggningslänken.
+### `checkut.js` – checkout
+- Calculates the number of items and the total amount with `reduce()` and shows the order summary.
 
-## Utmaningar och lösningar
-En utmaning var att göra galleriet responsivt och snyggt på alla enheter. Det löste jag med media queries och justering av grid-layouten. En annan utmaning var att skapa popup-fönstret på ett säkert sätt, vilket jag löste genom att använda `window.open` med exakta dimensioner och att sätta `noopener`för säkerhet.
+### `script1.js` – navigation and menu
+- Hamburger menu that closes automatically in desktop mode, using `window.matchMedia('(min-width: 769px)')`.
+- Closes the mobile menu when the user clicks outside it.
+- Back button to the home page and a centered login popup opened with `window.open` and `noopener`.
 
-Jag lärde mig mycket om responsiv design och hur viktigt det är att testa på olika skärmstorlekar. Om jag skulle göra om projektet skulle jag kanske lägga mer tid på att optimera bilderna för bättre prestanda.
+## Project structure
 
+```
+index.html        Home page
+gallery.html      Gallery with paintings
+shopping.html     Shopping cart
+checkut.html      Checkout
+about me.html     About me
+contact.html      Contact
+loggin.html       Login popup
+cart.js           Cart logic (shared)
+shopping.js       Cart page rendering
+checkut.js        Checkout summary
+script1.js        Menu, navigation and login
+*.css             Styles
+målningar/        Images of the paintings
+```
+
+## Run locally
+
+No installation is needed. Clone the repository and open `index.html` in a browser:
+
+```bash
+git clone https://github.com/arezooshahgaldi-lang/Minkonstwebb.git
+cd Minkonstwebb
+```
+
+Or use the Live Server extension in VS Code.
+
+## My contribution
+
+This is an individual project. I designed and built the whole website myself, including the layout, the responsive design and all JavaScript functionality. The paintings on the site are my own artwork.
+
+## Challenges and what I learned
+
+- **Responsive gallery:** making the gallery look good on all screen sizes. I solved it with media queries and by adjusting the grid layout.
+- **Secure popup:** opening the login window safely, which I solved with `window.open` with fixed dimensions and `noopener`.
+- **Saving state between pages:** `localStorage` can only store text, so I convert the cart with `JSON.stringify()` and `JSON.parse()`.
+
+I learned a lot about responsive design and how important it is to test on different screen sizes.
+
+## Possible improvements
+
+- Optimize images for better performance
+- Move inline styles into the CSS files
+- Connect the checkout and login to a real backend
