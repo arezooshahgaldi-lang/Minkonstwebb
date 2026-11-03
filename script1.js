@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //knappen som går på start sidan
   const backBtn = document.getElementById('btn-back-home');
   backBtn?.addEventListener('click', () => {
-    window.location.href = './konst1.html';
+    window.location.href = './index.html';
   });
 
   // // Öppnar inloggningsfönstret i en centrerad popup

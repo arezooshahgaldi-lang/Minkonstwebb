@@ -82,6 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateCart();
    function goToHome() {
-    window.location.href = 'konst1.html';
+    window.location.href = './index.html';
   }
 });
